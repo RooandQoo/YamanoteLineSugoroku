@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+A:
+  id: 1
+  name: team A
+  place: 1
+  direction: true
+
+B:
+  id: 2
+  name: team B
+  place: 1
+  direction: false
