@@ -11,10 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111128164009) do
+ActiveRecord::Schema.define(:version => 20120225083246) do
 
   create_table "stations", :force => true do |t|
     t.string   "station_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.integer  "station"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20111128164009) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "direction"
+    t.string   "password"
   end
 
 end

@@ -1,0 +1,16 @@
+<p style="color: Red"><%= @error %></p>
+<%= form_tag :action => 'auth' do %>
+    <div class ="field">
+      <label>チーム名：<br />
+        <%= text_field_tag(:name, '', { :size => 20 }) %></label>
+    </div>
+    <div class="field">
+      <label>パスワード：<br />
+        <%= password_field_tag(:password, '', { :size => 20 }) %></label>
+    </div>
+    <%= hidden_field_tag :referer, flash[:referer] %>
+    <%= submit_tag 'ログイン' %>
+    <br />
+    <br />
+    <%= link_to '新規登録', new_team_path %>
+<% end %>

@@ -1,5 +1,9 @@
 class DiceController < ApplicationController
   def index
+    team = Team.find(1)
+    @team_name = team.name
+    @current_name = Station.find(team.place).station_name
+    
     respond_to do |format|
       format.html # index.html.erb
     end

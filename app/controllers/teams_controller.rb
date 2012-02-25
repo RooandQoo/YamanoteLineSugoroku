@@ -1,4 +1,5 @@
 class TeamsController < ApplicationController
+  skip_before_filter :check_logined, :only => ['index', 'new', 'create']
   # GET /teams
   # GET /teams.json
   def index
@@ -42,9 +43,17 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(params[:team])
 
+    @team.password = Digest::SHA1.hexdigest(@team.password).first
+    if(params[:direction] == 'yes') then
+      @team.direction = false
+    else
+      @team.direction = true
+    end
+    @team.place = 1 #tokyo
+
     respond_to do |format|
       if @team.save
-        format.html { redirect_to @team, notice: 'Team was successfully created.' }
+        format.html { redirect_to @team,  notice: 'Team was successfully created.' }
         format.json { render json: @team, status: :created, location: @team }
       else
         format.html { render action: "new" }

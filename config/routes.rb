@@ -1,6 +1,8 @@
 Yamanote::Application.routes.draw do
   resources :teams
-  
+  resources :tasks
+
+  match '/login' => 'login#auth'
   match '/dice' => 'dice#index'
   match '/dice/result' => 'dice#result'
 

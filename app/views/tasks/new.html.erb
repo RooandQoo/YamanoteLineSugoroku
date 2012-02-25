@@ -1,0 +1,59 @@
+<h1>New task</h1>
+
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :station %><br />
+    <%= f.select(:station, [
+                ['東京', 1],
+                ['有楽町', 2],
+                ['新橋', 3],
+                ['浜松町', 4],
+                ['田町', 5],
+                ['品川', 6],
+                ['大崎', 7],
+                ['五反田', 8],
+                ['目黒', 9],
+                ['恵比寿', 10],
+                ['渋谷', 11],
+                ['原宿', 12],
+                ['代々木', 13],
+                ['新宿', 14],
+                ['新大久保', 15],
+                ['高田馬場', 16],
+                ['目白', 17],
+                ['池袋', 18],
+                ['大塚', 19],
+                ['巣鴨', 20],
+                ['駒込', 21],
+                ['田端', 22],
+                ['西日暮里', 23],
+                ['日暮里', 24],
+                ['鶯谷', 25],
+                ['上野', 26],
+                ['御徒町', 27],
+                ['秋葉原', 28],
+                ['神田', 29]
+            ])%>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', tasks_path %>
