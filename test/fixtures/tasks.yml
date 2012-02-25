@@ -1,9 +1,147 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  station: 
-  title: MyString
+tokyo01:
+  station: 1
+  title: ゴール！！
+  moveto: 0
 
-two:
-  station: 
-  title: MyString
+yurakucho01:
+  station: 2
+  title: 歩いて東京駅に戻れ
+  moveto: 1
+
+
+shimbashi01:
+  station: 3
+  title: 日テレビルの写真を撮れ
+  moveto: 0
+
+hamamatsu01:
+  station: 4
+  title: モノレールの写真を撮れ
+  moveto: 0
+
+tamachi01:
+  station: 5
+  title: 慶應大の正門の写真を撮れ
+  moveto: 0
+
+shinagawa01:
+  station: 6
+  title: ソニービルの写真を撮れ
+  moveto: 0
+
+osaki01:
+  station: 7
+  title: 埼京線で池袋まで行け
+  moveto: 18
+
+gotanda01:
+  station: 8
+  title: ねむの木の庭に行け
+  moveto: 0
+
+meguro01:
+  station: 9
+  title: 庭園美術館に行け
+  moveto: 0
+
+ebisu01:
+  station: 10
+  title: エビスビール記念館に行け
+  moveto: 0
+
+shibuya01:
+  station: 11
+  title: ハチ公の写真を撮れ
+  moveto: 0
+
+harajuku01:
+  station: 12
+  title: 明治神宮に行け
+  moveto: 0
+
+yoyogi01:
+  station: 13
+  title: 歩いて新宿へ行け
+  moveto: 14
+
+shinjuku01:
+  station: 14
+  title: 都庁に行け
+  moveto: 0
+
+shinokubo01:
+  station: 15
+  title: 総武線で秋葉原まで行け
+  moveto: 28
+
+baba01:
+  station: 16
+  title: 早稲田大学の正門を撮れ
+  moveto: 0
+
+mejiro01:
+  station: 17
+  title: 目白庭園に行け
+  moveto: 0
+
+ikebukuro01:
+  station: 18
+  title: サンシャイン60の写真を撮れ
+  moveto: 0
+
+ostuka01:
+  station: 19
+  title: 歩いて池袋まで行け
+  moveto: 18
+
+sugamo01:
+  station: 20
+  title: とげぬき地蔵に行け
+  moveto: 0
+
+komagome01:
+  station: 21
+  title: 都立六義園を一周しろ
+  moveto: 0
+
+tabata01:
+  station: 22
+  title: 京浜東北線で品川まで行け
+  moveto: 0
+
+nishinippori01:
+  station: 23
+  title: 歩いて日暮里へ行け
+  moveto: 24
+
+nippori01:
+  station: 24
+  title: 歩いて西日暮里へ行け
+  moveto: 23
+
+uguisudani01:
+  station: 25
+  title: なんでもいいからホテルの入り口へ行け
+  moveto: 0
+
+ueno01:
+  station: 26
+  title: 上野動物園へ行け
+  moveto: 0
+
+okachimachi01:
+  station: 27
+  title: 歩いて上野へ行け
+  moveto: 26
+
+akihabara01:
+  station: 28
+  title: なんか面白い写真撮れ
+  moveto: 0
+
+kanda01:
+  station: 29
+  title: 中央線で新宿まで行け
+  moveto: 14

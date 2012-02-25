@@ -4,6 +4,7 @@
   <tr>
     <th>Place</th>
     <th>Title</th>
+    <th>Moveto</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +14,7 @@
   <tr>
     <td><%= task.station %></td>
     <td><%= task.title %></td>
+    <td><%= task.moveto %></td>
     <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
