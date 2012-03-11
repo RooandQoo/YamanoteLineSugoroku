@@ -1,8 +1,12 @@
 Yamanote::Application.routes.draw do
-  resources :teams
+  devise_for :users
+
+  root :to => 'dice#index'
+  get 'dice', :to => 'dice#index', :as => :user_root
+  
   resources :tasks
 
-  match '/login' => 'login#auth'
+  match '/login' => 'login#index'
   match '/dice' => 'dice#index'
   match '/dice/result' => 'dice#result'
 

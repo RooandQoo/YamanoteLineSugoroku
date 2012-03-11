@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Resulut
+  %body
+    %h1 Result
+    %p
+      出た目は
+      %b= @number
+      です！
+    %p
+      チーム
+      %b= @team_name
+      の次の目的地は
+      %b= @dest_name
+      です。
+    %p
+      あなたへの司令は
+      %b= @task_title
+      です！！
+    %p= link_to('完了', {:controller => 'dice', :action => 'index'})

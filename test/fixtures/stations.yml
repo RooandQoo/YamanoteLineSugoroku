@@ -1,7 +1,117 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  station_name: MyString
+s01:
+  id: 1
+  station_name: 東京
 
-two:
-  station_name: MyString
+s02:
+  id: 2
+  station_name: 有楽町
+
+s03:
+  id: 3
+  station_name: 新橋
+
+s04:
+  id: 4
+  station_name: 浜松町
+
+s05:
+  id: 5
+  station_name: 田町
+
+s06:
+  id: 6
+  station_name: 品川
+
+s07:
+  id: 7
+  station_name: 大崎
+
+s08:
+  id: 8
+  station_name: 五反田
+
+s09:
+  id: 9
+  station_name: 目黒
+
+s10:
+  id: 10
+  station_name: 恵比寿
+
+s11:
+  id: 11
+  station_name: 渋谷
+
+s12:
+  id: 12
+  station_name: 原宿
+
+s13:
+  id: 13
+  station_name: 代々木
+
+s14:
+  id: 14
+  station_name: 新宿
+
+s15:
+  id: 15
+  station_name: 新大久保
+
+s16:
+  id: 16
+  station_name: 高田馬場
+
+s17:
+  id: 17
+  station_name: 目白
+
+s18:
+  id: 18
+  station_name: 池袋
+
+s19:
+  id: 19
+  station_name: 大塚
+
+s20:
+  id: 20
+  station_name: 巣鴨
+
+s21:
+  id: 21
+  station_name: 駒込
+
+s22:
+  id: 22
+  station_name: 田端
+
+s23:
+  id: 23
+  station_name: 西日暮里
+
+s24:
+  id: 24
+  station_name: 日暮里
+
+s25:
+  id: 25
+  station_name: 鶯谷
+
+s26:
+  id: 26
+  station_name: 上野
+
+s27:
+  id: 27
+  station_name: 御徒町
+
+s28:
+  id: 28
+  station_name: 秋葉原
+
+s29:
+  id: 29
+  station_name: 神田

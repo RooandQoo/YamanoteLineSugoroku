@@ -1,8 +1,8 @@
 class DiceController < ApplicationController
   def index
-    team = Team.find(1)
-    @team_name = team.name
-    @current_name = Station.find(team.place).station_name
+    user = User.first
+    @team_name = user.name
+    @current_name = Station.find(user.place).station_name
     
     respond_to do |format|
       format.html # index.html.erb
@@ -11,34 +11,32 @@ class DiceController < ApplicationController
 
   def result
     @number = rand(6) + 1
-    team = Team.find(1)
-    @team_name = team.name
-    if team.direction == true
-      dest = (team.place += @number).modulo(29)
+    user = User.find(1)
+    @team_name = user.name
+    if user.direction == true
+      dest = (user.place += @number).modulo(29)
     else
-      dest = (team.place -= @number).modulo(29)
+      dest = (user.place -= @number).modulo(29)
     end
     
     if(dest == 0)
-        team.place = 29
+      user.place = 29
     else
-        team.place = dest
+        user.place = dest
     end
 
+    user.save
 
-    station = Station.find(team.place)
-    tasks = Task.find_all_by_station(team.place)
-    p tasks.length
+    station = Station.find(user.place)
+    tasks = Task.find_all_by_station(user.place)
     task = tasks[rand(tasks.length)]
-    p task.title
     @dest_name = station.station_name
     @task_title = task.title
 
     if(task.moveto != 0)
-      team.place = task.moveto
+      user.place = task.moveto
+      user.save
     end
-
-    team.save
 
     respond_to do |format|
       format.html # result.html.erb

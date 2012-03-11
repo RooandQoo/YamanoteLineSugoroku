@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Yamanote Line Sugoroku
+  %body
+    %h1 Yamanote Line Sugoroku
+    %p= image_tag "/images/dice.png"
+    %p
+      チーム：
+      %b= @team_name
+    %p
+      現在地：
+      %b= @current_name
+    %p= link_to('サイコロを振る', {:controller => 'dice', :action => 'result'}, {:class => 'button'}) 
