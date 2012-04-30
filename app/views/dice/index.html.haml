@@ -5,10 +5,16 @@
   %body
     %h1 Yamanote Line Sugoroku
     %p= image_tag "/images/dice.png"
-    %p
-      チーム：
-      %b= @team_name
-    %p
-      現在地：
-      %b= @current_name
-    %p= link_to('サイコロを振る', {:controller => 'dice', :action => 'result'}, {:class => 'button'}) 
+    -if user_signed_in?
+      %p
+        チーム：
+        %b= @team_name
+      %p
+        現在地：
+        %b= @current_name
+      %p= link_to('サイコロを振る', {:controller => 'dice', :action => 'result'}, {:class => 'button'})
+      %br
+      %p= link_to('ログアウト', destroy_user_session_path, {:method => :get})
+    -else
+      %p= link_to('ログイン', new_user_session_path)
+      %p= link_to('新規登録', new_user_registration_path)

@@ -6,11 +6,24 @@
   <div><%= f.label :name %><br />
   <%= f.text_field :name %></div>
 
+<!-- emailに適当に代入 --!>
+  <% 
+    @string = [*0..9, *'a'..'z', *'A'..'Z'].sample(8).join
+    @string.concat('@hoge.com')
+  %>
+  <div><%= f.label :email %><br />
+    <%= f.text_field :email, {:value => @string} %></div>
+
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
 
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
+
+  <label><div>
+      <%= f.check_box :direction, {:checked => true} %>
+    時計回り
+  </div></label>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>

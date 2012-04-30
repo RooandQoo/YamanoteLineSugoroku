@@ -1,9 +1,10 @@
 class DiceController < ApplicationController
   def index
-    user = User.first
-    @team_name = user.name
-    @current_name = Station.find(user.place).station_name
-    
+    if user_signed_in?
+      user = current_user
+      @team_name = user.name
+      @current_name = Station.find(user.place).station_name
+    end
     respond_to do |format|
       format.html # index.html.erb
     end
@@ -11,14 +12,14 @@ class DiceController < ApplicationController
 
   def result
     @number = rand(6) + 1
-    user = User.find(1)
-    @team_name = user.name
-    if user.direction == true
+    user = current_user
+    @team_name = current_user.name
+    if user.direction == 1
       dest = (user.place += @number).modulo(29)
     else
       dest = (user.place -= @number).modulo(29)
     end
-    
+
     if(dest == 0)
       user.place = 29
     else

@@ -10,7 +10,11 @@
   <%= f.password_field :password %></div>
 
   <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <%= f.password_field :password_confirmation %></div>
+
+  <div>
+    <%= f.check_box_tag :direction, "direction", "1" %><br />
+  </div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
