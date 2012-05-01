@@ -11,7 +11,7 @@
     @string = [*0..9, *'a'..'z', *'A'..'Z'].sample(8).join
     @string.concat('@hoge.com')
   %>
-  <div><%= f.label :email %><br />
+  <div><%= f.label :email %>(このままにしておいて下さい)<br />
     <%= f.text_field :email, {:value => @string} %></div>
 
   <div><%= f.label :password %><br />
