@@ -13,6 +13,7 @@ class DiceController < ApplicationController
   def result
     @number = rand(6) + 1
     user = current_user
+    @current_place = Station.find(user.place).station_name
     @team_name = current_user.name
     if user.direction == 1
       dest = (user.place += @number).modulo(29)

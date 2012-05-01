@@ -1,21 +1,22 @@
 !!!
-%html
-  %head
-    %title Result
-  %body
-    %h1 Result
-    %p
-      出た目は
-      %b= @number
-      です！
-    %p
-      チーム
-      %b= @team_name
-      の次の目的地は
-      %b= @dest_name
-      です。
-    %p
-      あなたへの司令は
-      %b= @task_title
-      です！！
-    %p= link_to('完了', {:controller => 'dice', :action => 'index'})
+%h1 Result
+%p
+  出た目は
+  %b= @number
+  です！
+%p
+  チーム
+  %b= @team_name
+  の次の目的地は
+  %b= @dest_name
+  です。
+%p
+  あなたへの司令は
+  %b= @task_title
+  です！！
+- string = @current_place.concat('にいるチーム ').concat(@team_name).concat(' がサイコロを振り、').concat(@number.to_s).concat('が出たため、目的地は').concat(@dest_name).concat('となりました。').concat('ミッションは『').concat(@task_title).concat('』です。#yls')
+- url = 'https://twitter.com/intent/tweet?text='.concat(string)
+- uri = URI.encode(url)
+%a{:title => "ツイートする", :href => uri, :class => "twitter-hashtag-button", :datalang =>"ja", :datasize => "large"}ツイートする
+%p= link_to('完了', {:controller => 'dice', :action => 'index'})
+
