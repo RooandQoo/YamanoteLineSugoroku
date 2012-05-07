@@ -5,3 +5,39 @@
  *= require_self
  *= require_tree . 
 */
+
+body {
+  text-align: center;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc #999 #999 #ccc;
+  -webkit-border-radius: 7px; /* Chrome,Safari */
+  -moz-border-radius: 7px;    /* Firefox */
+  border-radius: 7px;         /* CSS3 */
+  padding: 0.3em 0.9em;
+  /* 背景グラデ */
+  /* Firefox */
+  background: -moz-linear-gradient(top, #fff, #ccc);
+  /* Opera */
+  background: -o-linear-gradient(top, #fff, #ccc);
+  /* IE */
+  filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffffff,EndColorStr=#ffcccccc);
+  /* Chrome,Safari */
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+  /* CSS3 */
+  background: linear-gradient(top, #fff, #ccc);
+  text-decoration: none;
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin: 0.5em auto;
+}
+

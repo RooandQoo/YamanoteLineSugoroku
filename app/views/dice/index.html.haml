@@ -1,9 +1,10 @@
-%p= image_tag "/images/dice.png"
--if user_signed_in?
-  %p
-    チーム：
-    %b= @team_name
-  %p
-    現在地：
-    %b= @current_name
-  %p= link_to('サイコロを振る', {:controller => 'dice', :action => 'result'}, {:class => 'button'})
+.main
+  %p= image_tag "/images/dice.png"
+  -if user_signed_in?
+    %p
+      チーム：
+      %b= @team_name
+    %p
+      現在地：
+      %b= @current_name
+    %p= link_to('サイコロを振る', {:controller => 'dice', :action => 'result'}, {:class => 'button'})
