@@ -6,13 +6,14 @@
  *= require_tree . 
 */
 
-body {
+.main {
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
 }
 
-.main {
-  width: 80%;
-  margin: 0 auto;
+.text_main {
+  font-size: 18px;
 }
 
 .button {

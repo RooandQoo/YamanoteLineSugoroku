@@ -1,10 +1,13 @@
 .main
   %p= image_tag "/images/dice.png"
   -if user_signed_in?
-    %p
+    %p.text_main
       チーム：
       %b= @team_name
-    %p
+    %p.text_main
       現在地：
       %b= @current_name
     %p= link_to('サイコロを振る', {:controller => 'dice', :action => 'result'}, {:class => 'button'})
+  -else
+    %p= link_to('ログイン', new_user_session_path, { :class => 'button' })
+    %p= link_to('新規登録', new_user_registration_path, { :class => 'button' })
