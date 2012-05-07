@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks
   def index
-    @tasks = Task.all
+    @tasks = Task.find(:all, :order => 'station')
 
     respond_to do |format|
       format.html # index.html.erb

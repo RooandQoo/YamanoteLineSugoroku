@@ -20,6 +20,11 @@ yurakucho03:
   title: 有楽町マリオンの時計台に行け
   moveto: 0
 
+yurakucho04:
+  station: 3
+  title: ビックカメラの前で記念撮影しろ
+  moveto: 0
+
 shimbashi01:
   station: 3
   title: 日テレビルの写真を撮れ
@@ -29,6 +34,11 @@ shimbashi02:
   station: 3
   title: 愛宕神社に行け
   moveto: 0
+
+shimbashi03:
+  station: 3
+  title: 京浜東北線で田町へ行け
+  moveto: 5
 
 hamamatsu01:
   station: 4
@@ -47,7 +57,7 @@ tamachi01:
 
 tamachi02:
   station: 5
-  title: 三田台公園の写真を撮れ
+  title: 三田台公園へ行け
   moveto: 0
 
 tamachi03:
@@ -67,17 +77,17 @@ shinagawa02:
 
 osaki01:
   station: 7
-  title: 埼京線で池袋まで行け
-  moveto: 18
+  title: 品川神社へ行け
+  moveto: 0
 
 osaki02:
   station: 7
-  title: 品川神社へ行け
+  title: 物流博物館に行け
   moveto: 0
 
 osaki03:
   station: 7
-  title: 物流博物館に行け
+  title: 国道1号の標識を撮れ
   moveto: 0
 
 gotanda01:
@@ -112,8 +122,8 @@ ebisu01:
 
 ebisu02:
   station: 10
-  title: 埼京線で池袋へ行け
-  moveto: 18
+  title: 恵比寿様の写真を撮れ
+  moveto: 0
 
 shibuya01:
   station: 11
@@ -152,25 +162,15 @@ shinjuku01:
 
 shinjuku02:
   station: 14
-  title: 中央線で神田へ行け
-  moveto: 29
-
-shinjuku03:
-  station: 14
   title: 新宿No.1の音ゲーコーナーへ行け(あのポーズで写真を撮ろう)
   moveto: 0
 
 shinokubo01:
   station: 15
-  title: 総武線で秋葉原まで行け
-  moveto: 28
-
-shinokubo02:
-  station: 15
   title: 総武線で代々木まで行け
   moveto: 13
 
-shinokubo03:
+shinokubo02:
   station: 15
   title: 韓国っぽい何かを撮れ
   moveto: 0
@@ -212,8 +212,8 @@ ikebukuro02:
 
 ikebukuro03:
   station: 18
-  title: 埼京線で恵比寿へ行け
-  moveto: 10
+  title: 埼京線で新宿へ行き、総武線で新大久保へ行け
+  moveto: 15
 
 ostuka01:
   station: 19
@@ -223,6 +223,11 @@ ostuka01:
 ostuka02:
   station: 19
   title: 護国寺へ行け
+  moveto: 0
+
+ostuka02:
+  station: 19
+  title: 都電の写真を撮れ
   moveto: 0
 
 sugamo01:
@@ -247,13 +252,13 @@ komagome02:
 
 tabata01:
   station: 22
-  title: 京浜東北線で品川まで行け
-  moveto: 0
-
-tabata01:
-  station: 22
   title: 田端文士村記念館へ行け
   moveto: 0
+
+tabata02:
+  station: 22
+  title: 京浜東北線で上野まで行け
+  moveto: 26
 
 nishinippori01:
   station: 23
@@ -312,7 +317,7 @@ okachimachi02:
 
 akihabara01:
   station: 28
-  title: なんか面白い写真撮れ
+  title: なんか面白い写真を撮れ
   moveto: 0
 
 akihabara02:
@@ -320,18 +325,23 @@ akihabara02:
   title: 電気街で変なパーツを買え(お金に余裕がなければとりあえず電気街をぶらぶらしろ)
   moveto: 0
 
-akihabara02:
-  station: 28
-  title: 総武線で代々木へ行け
-  moveto: 0
-
 kanda01:
   station: 29
-  title: 中央線で新宿まで行け
-  moveto: 13
+  title: 中央線で東京まで行け(ゴール扱いにはならない)
+  moveto: 1
 
 kanda02:
   station: 29
   title: 貨幣博物館へ行け
+  moveto: 0
+
+kanda03:
+  station: 29
+  title: 歩いて東京に行け(ゴール扱いになる！おめでとう！)
+  moveto: 1
+
+kanda04:
+  station: 29
+  title: 歌舞伎座へ行け
   moveto: 0
 

@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Place</th>
+    <th>S Name</th>
     <th>Title</th>
     <th>Moveto</th>
     <th></th>
@@ -13,6 +14,7 @@
 <% @tasks.each do |task| %>
   <tr>
     <td><%= task.station %></td>
+    <td><%= Station.find(task.station).station_name.to_s %></td>
     <td><%= task.title %></td>
     <td><%= task.moveto %></td>
     <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>
